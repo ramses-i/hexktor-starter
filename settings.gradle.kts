@@ -2,6 +2,8 @@ rootProject.name = "ktor-hexagonal-multimodule"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
+includeBuild("build-logic")
+
 // TODO: Restore include when build-logic is implemented
 //include(
 //    "app:infra",

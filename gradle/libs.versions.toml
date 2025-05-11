@@ -90,8 +90,9 @@ shadow = { module = "com.github.johnrengelman:shadow", version.ref = "shadow-ver
 
 [plugins]
 # Project custom plugins
-project-common-conventions = { id = "common.conventions", version = "unspecified" }
-project-application-conventions = { id = "application.conventions", version = "unspecified" }
+project-common-conventions = { id = "conventions.common", version = "unspecified" }
+project-application-conventions = { id = "conventions.application", version = "unspecified" }
+project-library-conventions = { id = "conventions.library", version = "unspecified" }
 
 # Compile plugins
 openapi-generator = { id = "org.openapi.generator", version.ref = "openapi-generator-gradle-plugin-version" }
