@@ -8,7 +8,7 @@ it as a foundation for much larger services.
 
 ## What tools/frameworks do we use?
 
-- **gradle** - our build system of choice (using Kotlin DSL)
+- **gradle** - our build system of choice (using Kotlin DSL and Versions Catalog)
 - **kotlin** - our language of choice
 - **ktor 2** for creating web application: https://github.com/ktorio/ktor
 - **ExposedSQL** to access database: https://github.com/JetBrains/Exposed
