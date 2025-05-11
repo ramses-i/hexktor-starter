@@ -10,11 +10,11 @@ plugins {
 }
 
 dependencies {
-    api(project(":app:adapters:env"))
-    api(project(":app:adapters:persist"))
-    api(project(":app:adapters:remoting"))
-    api(project(":app:adapters:primary-web"))
-    api(project(":app:core"))
+    api(projects.app.adapters.env)
+    api(projects.app.adapters.persist)
+    api(projects.app.adapters.remoting)
+    api(projects.app.adapters.primaryWeb)
+    api(projects.app.core)
 
     implementation("io.ktor:ktor-server-core:$ktorVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")

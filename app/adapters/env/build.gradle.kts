@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    api(project(":app:core"))
+    api(projects.app.core)
 
     implementation("com.typesafe:config:$typesafeConfigVersion")
 }

@@ -7,8 +7,8 @@ plugins {
 }
 
 dependencies {
-    api(project(":app:core"))
-    api(project(":app:common"))
+    api(projects.app.core)
+    api(projects.app.common)
 
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-cio:$ktorVersion")

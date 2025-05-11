@@ -10,7 +10,7 @@ plugins {
 }
 
 dependencies {
-    api(project(":app:core"))
+    api(projects.app.core)
     implementation("org.jetbrains.exposed:exposed-core:$exposedSqlVersion")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedSqlVersion")
     implementation("org.jetbrains.exposed:exposed-java-time:$exposedSqlVersion")
