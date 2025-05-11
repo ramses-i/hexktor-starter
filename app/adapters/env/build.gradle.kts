@@ -1,11 +1,9 @@
-val typesafeConfigVersion: String by rootProject
-
 plugins {
-    id("kotlin-library-conventions")
+    alias(libs.plugins.project.library.conventions)
 }
 
 dependencies {
-    api(project(":app:core"))
+    api(projects.app.core)
 
-    implementation("com.typesafe:config:$typesafeConfigVersion")
+    implementation(libs.typesafe.config)
 }

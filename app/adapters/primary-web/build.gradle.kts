@@ -1,33 +1,28 @@
-val ktorVersion: String by rootProject
-val koinVersion: String by rootProject
-val swaggerAnnotationsVersion: String by rootProject
-val kotestKtorVersion: String by rootProject
-
 plugins {
-    id("kotlin-library-conventions")
-    kotlin("plugin.serialization")
-    id("org.openapi.generator")
+    alias(libs.plugins.project.library.conventions)
+    alias(libs.plugins.serialization)
+    alias(libs.plugins.openapi.generator)
 }
 
 dependencies {
-    api(project(":app:core"))
-    api(project(":app:common"))
+    api(projects.app.core)
+    api(projects.app.common)
 
-    implementation("io.ktor:ktor-server-core:$ktorVersion")
-    implementation("io.ktor:ktor-server-call-logging:$ktorVersion")
-    implementation("io.ktor:ktor-server-cors:$ktorVersion")
-    implementation("io.ktor:ktor-server-status-pages:$ktorVersion")
-    implementation("io.ktor:ktor-server-host-common-jvm:$ktorVersion")
-    implementation("io.ktor:ktor-server-call-logging-jvm:$ktorVersion")
-    implementation("io.ktor:ktor-server-call-id-jvm:$ktorVersion")
-    implementation("io.ktor:ktor-server-content-negotiation:$ktorVersion")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-    implementation("io.insert-koin:koin-ktor:$koinVersion")
-    implementation("io.swagger.core.v3:swagger-annotations:$swaggerAnnotationsVersion")
+    implementation(libs.ktor.server.core)
+    implementation(libs.ktor.server.call.logging)
+    implementation(libs.ktor.server.cors)
+    implementation(libs.ktor.server.status.pages)
+    implementation(libs.ktor.server.host.common.jvm)
+    implementation(libs.ktor.server.call.logging.jvm)
+    implementation(libs.ktor.server.call.id.jvm)
+    implementation(libs.ktor.server.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.koin.ktor)
+    implementation(libs.swagger.annotations)
 
-    testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
-    testImplementation("io.kotest.extensions:kotest-assertions-ktor:$kotestKtorVersion")
-    testImplementation("io.ktor:ktor-server-netty:$ktorVersion")
+    testImplementation(libs.ktor.server.test.host)
+    testImplementation(libs.kotest.assertions.ktor)
+    testImplementation(libs.ktor.server.netty)
 }
 
 openApiGenerate {

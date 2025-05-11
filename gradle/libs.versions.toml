@@ -1,0 +1,103 @@
+[versions]
+java-version = "21"
+kotlin-version = "2.1.10"
+ktor-version = "2.3.10"
+logback-version = "1.4.14"
+koin-version = "3.5.0"
+exposed-sql-version = "0.45.0"
+postgres-driver-version = "42.7.1"
+jakarta-validation-version = "3.0.2"
+hibernate-validation-version = "8.0.1.Final"
+swagger-annotations-version = "2.2.19"
+inline-logger-version = "1.0.5"
+typesafe-config-version = "1.4.3"
+hikari-version = "5.1.0"
+test-containers-version = "1.19.3"
+kotest-version = "5.8.0"
+kotest-ktor-version = "2.0.0"
+kotest-koin-version = "1.1.0"
+kotest-test-containers-version = "2.0.2"
+ktlint-gradle-version = "12.0.2"
+kover-gradle-version = "0.7.5"
+openapi-generator-gradle-plugin-version = "7.1.0"
+shadow-version = "8.1.1"
+
+[libraries]
+# Kotlin
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-version" }
+kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin-version" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin-version" }
+
+# Koin
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin-version" }
+koin-logger-slf4j = { module = "io.insert-koin:koin-logger-slf4j", version.ref = "koin-version" }
+koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin-version" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin-version" }
+
+# Kotest
+kotest-runner-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest-version" }
+kotest-assertions-ktor = { module = "io.kotest.extensions:kotest-assertions-ktor", version.ref = "kotest-ktor-version" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest-version" }
+kotest-extensions-koin = { module = "io.kotest.extensions:kotest-extensions-koin", version.ref = "kotest-koin-version" }
+kotest-extensions-testcontainers = { module = "io.kotest.extensions:kotest-extensions-testcontainers", version.ref = "kotest-test-containers-version" }
+
+# Exposed
+exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed-sql-version" }
+exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed-sql-version" }
+exposed-java-time = { module = "org.jetbrains.exposed:exposed-java-time", version.ref = "exposed-sql-version" }
+
+# Ktor - Server
+ktor-server-test-host = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor-version" }
+ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor-version" }
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor-version" }
+ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktor-version" }
+ktor-server-cors = { module = "io.ktor:ktor-server-cors", version.ref = "ktor-version" }
+ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor-version" }
+ktor-server-host-common-jvm = { module = "io.ktor:ktor-server-host-common-jvm", version.ref = "ktor-version" }
+ktor-server-call-logging-jvm = { module = "io.ktor:ktor-server-call-logging-jvm", version.ref = "ktor-version" }
+ktor-server-call-id-jvm = { module = "io.ktor:ktor-server-call-id-jvm", version.ref = "ktor-version" }
+ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor-version" }
+
+# Ktor - Client
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor-version" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor-version" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor-version" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor-version" }
+ktor-client-logging-jvm = { module = "io.ktor:ktor-client-logging-jvm", version.ref = "ktor-version" }
+
+# Ktor - Serialization
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor-version" }
+
+# Testcontainers
+testcontainers = { module = "org.testcontainers:testcontainers", version.ref = "test-containers-version" }
+testcontainers-postgresql = { module = "org.testcontainers:postgresql", version.ref = "test-containers-version" }
+
+# Database
+hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "hikari-version" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgres-driver-version" }
+
+# Utilities
+kotlin-inline-logger = { module = "com.michael-bull.kotlin-inline-logger:kotlin-inline-logger", version.ref = "inline-logger-version" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback-version" }
+jakarta-validation-api = { module = "jakarta.validation:jakarta.validation-api", version.ref = "jakarta-validation-version" }
+hibernate-validator = { module = "org.hibernate:hibernate-validator", version.ref = "hibernate-validation-version" }
+ktlint-gradle = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlint-gradle-version" }
+kover-gradle-plugin = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version.ref = "kover-gradle-version" }
+typesafe-config = { module = "com.typesafe:config", version.ref = "typesafe-config-version" }
+openapi-generator-gradle-plugin = { module = "org.openapitools:openapi-generator-gradle-plugin", version.ref = "openapi-generator-gradle-plugin-version" }
+swagger-annotations = { module = "io.swagger.core.v3:swagger-annotations", version.ref = "swagger-annotations-version" }
+shadow = { module = "com.github.johnrengelman:shadow", version.ref = "shadow-version" }
+
+[plugins]
+# Project custom plugins
+project-common-conventions = { id = "conventions.common", version = "unspecified" }
+project-application-conventions = { id = "conventions.application", version = "unspecified" }
+project-library-conventions = { id = "conventions.library", version = "unspecified" }
+
+# Compile plugins
+openapi-generator = { id = "org.openapi.generator", version.ref = "openapi-generator-gradle-plugin-version" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-version" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover-gradle-version" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle-version" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-version" }
+ktor = { id = "io.ktor.plugin", version.ref = "ktor-version" }
