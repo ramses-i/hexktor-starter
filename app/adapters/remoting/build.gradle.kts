@@ -1,6 +1,6 @@
 plugins {
-    id("kotlin-library-conventions")
-    kotlin("plugin.serialization")
+    alias(libs.plugins.project.library.conventions)
+    alias(libs.plugins.serialization)
 }
 
 dependencies {

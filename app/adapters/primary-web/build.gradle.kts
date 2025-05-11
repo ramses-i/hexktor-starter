@@ -1,7 +1,7 @@
 plugins {
-    id("kotlin-library-conventions")
-    kotlin("plugin.serialization")
-    id("org.openapi.generator")
+    alias(libs.plugins.project.library.conventions)
+    alias(libs.plugins.serialization)
+    alias(libs.plugins.openapi.generator)
 }
 
 dependencies {
